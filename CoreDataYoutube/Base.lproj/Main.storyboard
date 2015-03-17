@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="CoreDataYoutube" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fzs-BK-LPP">
+                                <rect key="frame" x="16" y="28" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AS5-h6-yuX">
+                                <rect key="frame" x="16" y="66" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FGm-6B-Ohi">
+                                <rect key="frame" x="16" y="104" width="35" height="30"/>
+                                <state key="normal" title="Load">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnLoad" destination="vXZ-lx-hvc" eventType="touchUpInside" id="F2X-nJ-9D9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fqW-Um-bd9">
+                                <rect key="frame" x="550" y="104" width="34" height="30"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnSave" destination="vXZ-lx-hvc" eventType="touchUpInside" id="VUS-hM-sD8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fzs-BK-LPP" firstAttribute="trailing" secondItem="AS5-h6-yuX" secondAttribute="trailing" id="0bb-gn-7Ch"/>
+                            <constraint firstItem="fzs-BK-LPP" firstAttribute="trailing" secondItem="fqW-Um-bd9" secondAttribute="trailing" id="8XZ-yN-bqq"/>
+                            <constraint firstItem="AS5-h6-yuX" firstAttribute="top" secondItem="fzs-BK-LPP" secondAttribute="bottom" constant="8" symbolic="YES" id="9Sg-XT-vsx"/>
+                            <constraint firstItem="fzs-BK-LPP" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="OCJ-wJ-Stp"/>
+                            <constraint firstItem="fzs-BK-LPP" firstAttribute="leading" secondItem="AS5-h6-yuX" secondAttribute="leading" id="Rzy-J1-EGI"/>
+                            <constraint firstItem="fzs-BK-LPP" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="cpe-Up-eJa"/>
+                            <constraint firstItem="FGm-6B-Ohi" firstAttribute="baseline" secondItem="fqW-Um-bd9" secondAttribute="baseline" id="dOS-bc-g7a"/>
+                            <constraint firstItem="FGm-6B-Ohi" firstAttribute="top" secondItem="AS5-h6-yuX" secondAttribute="bottom" constant="8" symbolic="YES" id="lr9-NV-6dM"/>
+                            <constraint firstItem="fzs-BK-LPP" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" symbolic="YES" id="nrJ-Qo-fZX"/>
+                            <constraint firstItem="fzs-BK-LPP" firstAttribute="leading" secondItem="FGm-6B-Ohi" secondAttribute="leading" id="sgY-8O-yDP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="txtPassword" destination="AS5-h6-yuX" id="g19-Ur-j9V"/>
+                        <outlet property="txtUsername" destination="fzs-BK-LPP" id="wO9-Ss-VRD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
